@@ -57,10 +57,6 @@ chmod 755 ~rundeck
 
 # Add Plugins
 
-# Hipchat
-[[ ! -f /var/lib/rundeck/libext/rundeck-hipchat-plugin-1.0.0.jar ]] && {
-    cp /vagrant/rundeck-hipchat-plugin-1.0.0.jar /var/lib/rundeck/libext/
-}
 # nexus
 [[ ! -f /var/lib/rundeck/libext/nexus-step-plugins-1.0.0.jar ]] && {
 curl -sfL -o /var/lib/rundeck/libext/nexus-step-plugins-1.0.0.jar https://github.com/rundeck-plugins/nexus-step-plugins/releases/download/v1.0.0/nexus-step-plugins-1.0.0.jar

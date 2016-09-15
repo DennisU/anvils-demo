@@ -62,9 +62,6 @@ A nightly batch job needs to be run to rebuild catalog data. The developers have
 
 So the team turns to Rundeck. The scripts are plugged into Rundeck jobs. The catalog rebuild job is now run automatically by Rundeck each night and the appropriate notifications are sent. Also, the Ops team has given business managers the ability to run the job on demand if they need an update sooner than the next scheduled nightly run.
 
-Also, because the ops team uses [HipChat](http://www.hipchat.com) for a shared running chat log, notifications
-should also be configured to send job status there.
-
 ## Controlling Access: Logins and access control policy
 
 The rundeck instance is configured with several logins (user/password),
@@ -302,7 +299,6 @@ The rundeck VM runs a centos base box and installs software via yum/rpm.
 If you are curious how the rundeck and apache instances are installed see
 the vagrant provisioning scripts:
 
-* [install-rundeck.sh](https://github.com/rundeck/anvils-demo/blob/master/install-rundeck.sh): Installs java, rundeck and the hipchat notification plugin
 along with some utility packages like xmlstarlet.
 * [add-project.sh](https://github.com/rundeck/anvils-demo/blob/master/add-project.sh): Creates the "anvils" rundeck project and installs the jobs, configures the user accounts,
 nodes, ssh access, and copies scripts to the apache document root.
